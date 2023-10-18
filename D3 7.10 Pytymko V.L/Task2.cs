@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static D3_7._10_Pytymko_V.L.Class1;
 
 namespace D3_7._10_Pytymko_V.L
 {
@@ -77,9 +78,62 @@ namespace D3_7._10_Pytymko_V.L
                 Console.WriteLine("" + _profildescriptionS);
                 Console.WriteLine("" + _phones);
                 Console.WriteLine("" + _emailS);
-                Console.WriteLine("" + _area);
+                Console.WriteLine("" +_area);
             }
 
+            public static Store operator +(Store a,int b)
+            {
+                a._area += b;
+                return a;
+            }
+            public static Store operator -(Store a,int b)
+            {
+                a._area -= b;
+                return a;
+            }
+
+            public static bool operator ==(Store a, Store b)
+            {
+                if (a._area == b._area)
+
+                    return true;
+
+                else return false;
+            }
+
+            public static bool operator !=(Store a, Store b)
+            {
+                if (a._area != b._area)
+
+                    return true;
+
+                else return false;
+            }
+            public static bool operator >(Store a, Store b)
+            {
+                if (a._area > b._area)
+
+                    return true;
+
+                else return false;
+            }
+            public static bool operator <(Store a, Store b)
+            {
+                if (a._area < b._area)
+
+                    return true;
+
+                else return false;
+            }
+            public static bool Equals(Store a)
+            {
+                if (a is Store b)
+                {
+                    return a._area == b._area;
+                }
+                return false;
+
+            }
 
         }
     }

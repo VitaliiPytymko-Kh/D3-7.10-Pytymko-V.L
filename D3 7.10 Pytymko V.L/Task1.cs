@@ -121,21 +121,15 @@ namespace D3_7._10_Pytymko_V.L
 
             public static Journal operator +(Journal a, int b)
             {
-                
-                    
                     a._personal += b;
 
                     return a;
-
-                
             }
             public static Journal operator -(Journal a, int b)
             {
-                
                 a._personal -= b;
                 
                 return a;
-
             }
             public static bool operator ==(Journal a,Journal b)
             {
