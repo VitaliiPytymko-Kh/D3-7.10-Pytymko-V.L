@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static D3_7._10_Pytymko_V.L.Class1;
+using static D3_7._10_Pytymko_V.L.Task1;
 using static D3_7._10_Pytymko_V.L.Task2;
 
 namespace D3_7._10_Pytymko_V.L
