@@ -8,6 +8,13 @@ namespace D3_7._10_Pytymko_V.L
 {
     internal class Task2
     {
+//        Додайте до вже створеного класу
+//        інформацію про площу магазину.
+//        Виконайте навантаження + (для збільшення площі магазину на вказаний розмір),
+//        — (для зменшення площі магазину на вказаний розмір),
+//        == (перевірка на рівність площ магазинів),
+//        < і > (перевірка магазинів менших або більших за площею),
+//        != і Equals.Використовуйте механізм властивостей полів класу.
         public class Store
         {
             private string _nameS;
@@ -15,14 +22,16 @@ namespace D3_7._10_Pytymko_V.L
             private string _profildescriptionS;
             private string _phones;
             private string _emailS;
+            private int _area;
 
-            public Store(string nameS, string adress, string profildescriptionS, string phones, string emailS)
+            public Store(string nameS, string adress, string profildescriptionS, string phones, string emailS, int area)
             {
                 _nameS = nameS;
                 _adress = adress;
                 _profildescriptionS = profildescriptionS;
                 _phones = phones;
                 _emailS = emailS;
+                _area = area;
             }
 
             public string NameS { get { return _nameS; } }
@@ -31,12 +40,14 @@ namespace D3_7._10_Pytymko_V.L
             public string Phones { get { return _phones; } }
 
             public string EmaiS { get { return _emailS; } }
+            public int Area { get { return _area; } }
 
             public void SetNameS(string newNames) { _nameS = newNames; }
             public void SetAdress(string newAdress) { _adress = newAdress; }
             public void SetProfil(string newProfil) { _profildescriptionS = newProfil; }
             public void SetPhones(string newPhonees) { _phones = newPhonees; }
             public void SetEmail(string newEmails) { _emailS = newEmails; }
+            public void SetArea(int newArea) {  _area = newArea; }
 
             public void InputDataStore()
             {
@@ -54,6 +65,8 @@ namespace D3_7._10_Pytymko_V.L
 
                 Console.Write("Введіть email: ");
                 _emailS = Console.ReadLine();
+
+                Console.WriteLine("ВВудіть площу магазину м2");
             }
 
             public void ShowStore()
@@ -64,8 +77,10 @@ namespace D3_7._10_Pytymko_V.L
                 Console.WriteLine("" + _profildescriptionS);
                 Console.WriteLine("" + _phones);
                 Console.WriteLine("" + _emailS);
-
+                Console.WriteLine("" + _area);
             }
+
+
         }
     }
 }
