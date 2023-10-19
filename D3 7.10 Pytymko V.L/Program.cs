@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using static D3_7._10_Pytymko_V.L.Task1;
 using static D3_7._10_Pytymko_V.L.Task2;
+using static D3_7._10_Pytymko_V.L.Task3;
 
 namespace D3_7._10_Pytymko_V.L
 {
     internal class Program
     {
+
         static void Main(string[] args)
         {
             //Task1
@@ -40,9 +42,9 @@ namespace D3_7._10_Pytymko_V.L
 
             myStore.ShowStore();
 
-            myStore+=200;
+            myStore += 200;
             Console.WriteLine(myStore.Area);
-            myStore-=50;
+            myStore -= 50;
             Console.WriteLine(myStore.Area);
 
             Store s2 = new Store("xfgh", "dutyuy5667", "dfghfgh54bnm", "65465-65464", "zdfgdf@zxdfgh.com", 450);
@@ -52,7 +54,23 @@ namespace D3_7._10_Pytymko_V.L
             Console.WriteLine($"{myStore.Area < s2.Area}");
             Console.WriteLine($"{myStore.Area > s2.Area}");
             Console.WriteLine($"{myStore.Area != s2.Area}");
-            Console.WriteLine($" Equals (myStore,s2)={Equals(myStore.Area,s2.Area)}");
+            Console.WriteLine($" Equals (myStore,s2)={Equals(myStore.Area, s2.Area)}");
+
+            //Task3
+            ReadingList myreadL= new ReadingList();
+            myreadL.Add(new Book("AAA", "AAAA"));
+            myreadL.Add(new Book("BBB", "BBBB")); 
+            myreadL.Add(new Book("CCC", "CCCC"));
+
+            Console.WriteLine("AAA в списку?" + myreadL.Contains("AAA"));
+            Console.WriteLine("DDD в списку?"+myreadL.Contains("DDD"));
+
+            myreadL.RemoveBook("CCC");
+
+            Console.WriteLine(" кількість книг в списку "+myreadL.Count);
+            myreadL.PrintAllBooks();
+
+
 
 
             Console.WriteLine();
@@ -60,3 +78,4 @@ namespace D3_7._10_Pytymko_V.L
         }
     }
 }
+
